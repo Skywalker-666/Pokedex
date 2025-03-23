@@ -9,6 +9,11 @@ const pokemonRoutes = require("./routes/pokemonRoutes");
 
 const app = express();
 
+const authRoutes = require("./routes/auth");
+
+
+app.use("/api/auth", authRoutes);
+
 
 app.use("/api/pokemon", pokemonRoutes);
 
